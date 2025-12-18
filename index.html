@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Content Publishing Platform - Discover and publish amazing content">
+    <title>Modern Content Publishing Platform</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span>ContentHub</span>
+                    </a>
+                    
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="pages/about.html" class="nav-link">About</a></li>
+                        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-category="technology">Technology</a></li>
+                                <li><a href="#" data-category="lifestyle">Lifestyle</a></li>
+                                <li><a href="#" data-category="business">Business</a></li>
+                                <li><a href="#" data-category="health">Health</a></li>
+                                <li><a href="#" data-category="travel">Travel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles..." class="search-input">
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Amazing Stories</h1>
+                <p class="hero-subtitle">Your daily dose of inspiration, knowledge, and creativity</p>
+                <div class="hero-actions">
+                    <a href="#articles" class="btn btn-primary">Explore Content</a>
+                    <a href="pages/about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="health">Health</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Articles will be loaded dynamically -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading articles...</p>
+                </div>
+            </div>
+
+            <div class="load-more-wrapper">
+                <button class="btn btn-secondary" id="loadMoreBtn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Content</h2>
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Featured content will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Updated</h2>
+                <p class="newsletter-text">Subscribe to our newsletter and never miss our latest updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">
+                        <i class="fas fa-pen-fancy"></i> ContentHub
+                    </h3>
+                    <p class="footer-text">Your trusted source for quality content across multiple topics. Stay informed, stay inspired.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-category="technology">Technology</a></li>
+                        <li><a href="#" data-category="lifestyle">Lifestyle</a></li>
+                        <li><a href="#" data-category="business">Business</a></li>
+                        <li><a href="#" data-category="health">Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> info@contenthub.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Content St, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ContentHub. All rights reserved. Made with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
